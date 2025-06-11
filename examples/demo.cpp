@@ -35,7 +35,7 @@ int main() {
     std::string fancy = colorize(BRIGHT_MAGENTA, "Fancy colored string");
     std::cout << "Buffered output: " << fancy << std::endl;
 
-    // Show a progress bar
+    // Demo progress bar
     for (int i = 0; i <= 100; i += 1) {
         progress_bar(i);
         usleep(50000);
