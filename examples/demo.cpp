@@ -8,12 +8,12 @@
 int main() {
     using namespace color;
 
-    // Demo
+    // Demo basic text colors
     printc(RED,     "This is red text");
     printc(GREEN,   "This is green text");
     printc(BLUE,    "This is blue text");
 
-    // Demo
+    // Demo text attributes
     printc(BOLD,          "This is bold text");
     printc(UNDERLINE,     "This is underlined text");
     printc(ITALIC,        "This is italic text (if supported)");
