@@ -1,0 +1,150 @@
+\doxysection{tercol.\+h}
+\hypertarget{tercol_8h_source}{}\label{tercol_8h_source}\mbox{\hyperlink{tercol_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00041\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00042\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00043\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00044\ \textcolor{preprocessor}{\#include\ <sstream>}}
+\DoxyCodeLine{00045\ \textcolor{preprocessor}{\#include\ <type\_traits>}}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00048\ \textcolor{preprocessor}{\#ifndef\ TERCOL\_LIBRARY\_H}}
+\DoxyCodeLine{00049\ \textcolor{preprocessor}{\#define\ TERCOL\_LIBRARY\_H}}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00055\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespacecolor}{color}}\ \{}
+\DoxyCodeLine{00058\ \ \ \ \ \textcolor{keyword}{constexpr}\ \textcolor{keyword}{auto}\ \mbox{\hyperlink{namespacecolor_a20fa8cb242d8c7f1420307a0a71e7de7}{RESET}}\ =\ \textcolor{stringliteral}{"{}\(\backslash\)033[0m"{}};\ }
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00063\ \ \ \ \ \textcolor{keyword}{constexpr}\ \textcolor{keyword}{auto}\ BOLD\ =\ \textcolor{stringliteral}{"{}\(\backslash\)033[1m"{}};}
+\DoxyCodeLine{00064\ \ \ \ \ \textcolor{keyword}{constexpr}\ \textcolor{keyword}{auto}\ DIM\ =\ \textcolor{stringliteral}{"{}\(\backslash\)033[2m"{}};}
+\DoxyCodeLine{00065\ \ \ \ \ \textcolor{keyword}{constexpr}\ \textcolor{keyword}{auto}\ \mbox{\hyperlink{namespacecolor_a568fe3fe677654be1c3700c4c25d4af1}{ITALIC}}\ =\ \textcolor{stringliteral}{"{}\(\backslash\)033[3m"{}};\ }
+\DoxyCodeLine{00066\ \ \ \ \ \textcolor{keyword}{constexpr}\ \textcolor{keyword}{auto}\ UNDERLINE\ =\ \textcolor{stringliteral}{"{}\(\backslash\)033[4m"{}};}
+\DoxyCodeLine{00067\ \ \ \ \ \textcolor{keyword}{constexpr}\ \textcolor{keyword}{auto}\ \mbox{\hyperlink{namespacecolor_ad936897bb123603a16f4f5b8e71c18d5}{BLINK}}\ =\ \textcolor{stringliteral}{"{}\(\backslash\)033[5m"{}};\ }
+\DoxyCodeLine{00068\ \ \ \ \ \textcolor{keyword}{constexpr}\ \textcolor{keyword}{auto}\ \mbox{\hyperlink{namespacecolor_a4c8d8be0db979b3a2c527d567e8f9de2}{RAPID\_BLINK}}\ \ =\ \textcolor{stringliteral}{"{}\(\backslash\)033[6m"{}};\ }
+\DoxyCodeLine{00069\ \ \ \ \ \textcolor{keyword}{constexpr}\ \textcolor{keyword}{auto}\ REVERSE\ =\ \textcolor{stringliteral}{"{}\(\backslash\)033[7m"{}};\ }
+\DoxyCodeLine{00070\ \ \ \ \ \textcolor{keyword}{constexpr}\ \textcolor{keyword}{auto}\ \mbox{\hyperlink{namespacecolor_aa32405f144df01c27f4a798d0b213af3}{HIDE}}\ =\ \textcolor{stringliteral}{"{}\(\backslash\)033[8m"{}};\ }
+\DoxyCodeLine{00071\ \ \ \ \ \textcolor{keyword}{constexpr}\ \textcolor{keyword}{auto}\ \mbox{\hyperlink{namespacecolor_af111a4e552f4017bedf28f33d134741c}{STRIKETHROUGH}}\ =\ \textcolor{stringliteral}{"{}\(\backslash\)033[9m"{}};}
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00076\ \ \ \ \ \textcolor{keyword}{constexpr}\ \textcolor{keyword}{auto}\ PRIMARY\_FONT\ =\ \textcolor{stringliteral}{"{}\(\backslash\)033[10m"{}};}
+\DoxyCodeLine{00077\ \ \ \ \ \textcolor{keyword}{constexpr}\ \textcolor{keyword}{auto}\ FONT\_1\ =\ \textcolor{stringliteral}{"{}\(\backslash\)033[11m"{}};}
+\DoxyCodeLine{00078\ \ \ \ \ \textcolor{keyword}{constexpr}\ \textcolor{keyword}{auto}\ FONT\_2\ =\ \textcolor{stringliteral}{"{}\(\backslash\)033[12m"{}};}
+\DoxyCodeLine{00079\ \ \ \ \ \textcolor{keyword}{constexpr}\ \textcolor{keyword}{auto}\ FONT\_3\ =\ \textcolor{stringliteral}{"{}\(\backslash\)033[13m"{}};}
+\DoxyCodeLine{00080\ \ \ \ \ \textcolor{keyword}{constexpr}\ \textcolor{keyword}{auto}\ FONT\_4\ =\ \textcolor{stringliteral}{"{}\(\backslash\)033[14m"{}};}
+\DoxyCodeLine{00081\ \ \ \ \ \textcolor{keyword}{constexpr}\ \textcolor{keyword}{auto}\ FONT\_5\ =\ \textcolor{stringliteral}{"{}\(\backslash\)033[15m"{}};}
+\DoxyCodeLine{00082\ \ \ \ \ \textcolor{keyword}{constexpr}\ \textcolor{keyword}{auto}\ FONT\_6\ =\ \textcolor{stringliteral}{"{}\(\backslash\)033[16m"{}};}
+\DoxyCodeLine{00083\ \ \ \ \ \textcolor{keyword}{constexpr}\ \textcolor{keyword}{auto}\ FONT\_7\ =\ \textcolor{stringliteral}{"{}\(\backslash\)033[17m"{}};}
+\DoxyCodeLine{00084\ \ \ \ \ \textcolor{keyword}{constexpr}\ \textcolor{keyword}{auto}\ FONT\_8\ =\ \textcolor{stringliteral}{"{}\(\backslash\)033[18m"{}};}
+\DoxyCodeLine{00085\ \ \ \ \ \textcolor{keyword}{constexpr}\ \textcolor{keyword}{auto}\ FONT\_9\ =\ \textcolor{stringliteral}{"{}\(\backslash\)033[19m"{}};}
+\DoxyCodeLine{00087\ }
+\DoxyCodeLine{00090\ \ \ \ \ \textcolor{keyword}{constexpr}\ \textcolor{keyword}{auto}\ NORMAL\_INTENSITY\ =\ \textcolor{stringliteral}{"{}\(\backslash\)033[22m"{}};\ \ }
+\DoxyCodeLine{00091\ \ \ \ \ \textcolor{keyword}{constexpr}\ \textcolor{keyword}{auto}\ \mbox{\hyperlink{namespacecolor_ace740120b460c1d0b42beef87e862374}{NO\_BOLD}}\ =\ \textcolor{stringliteral}{"{}\(\backslash\)033[22m"{}};}
+\DoxyCodeLine{00092\ \ \ \ \ \textcolor{keyword}{constexpr}\ \textcolor{keyword}{auto}\ NO\_ITALIC\ =\ \textcolor{stringliteral}{"{}\(\backslash\)033[23m"{}};}
+\DoxyCodeLine{00093\ \ \ \ \ \textcolor{keyword}{constexpr}\ \textcolor{keyword}{auto}\ NO\_UNDERLINE\ =\ \textcolor{stringliteral}{"{}\(\backslash\)033[24m"{}};}
+\DoxyCodeLine{00094\ \ \ \ \ \textcolor{keyword}{constexpr}\ \textcolor{keyword}{auto}\ NO\_BLINK\ =\ \textcolor{stringliteral}{"{}\(\backslash\)033[25m"{}};}
+\DoxyCodeLine{00095\ \ \ \ \ \textcolor{keyword}{constexpr}\ \textcolor{keyword}{auto}\ NO\_REVERSE\ =\ \textcolor{stringliteral}{"{}\(\backslash\)033[27m"{}};}
+\DoxyCodeLine{00096\ \ \ \ \ \textcolor{keyword}{constexpr}\ \textcolor{keyword}{auto}\ NO\_HIDE\ =\ \textcolor{stringliteral}{"{}\(\backslash\)033[28m"{}};}
+\DoxyCodeLine{00097\ \ \ \ \ \textcolor{keyword}{constexpr}\ \textcolor{keyword}{auto}\ NO\_STRIKETHROUGH\ =\ \textcolor{stringliteral}{"{}\(\backslash\)033[29m"{}};}
+\DoxyCodeLine{00099\ }
+\DoxyCodeLine{00102\ \ \ \ \ \textcolor{keyword}{constexpr}\ \textcolor{keyword}{auto}\ BLACK\ =\ \textcolor{stringliteral}{"{}\(\backslash\)033[30m"{}};}
+\DoxyCodeLine{00103\ \ \ \ \ \textcolor{keyword}{constexpr}\ \textcolor{keyword}{auto}\ RED\ =\ \textcolor{stringliteral}{"{}\(\backslash\)033[31m"{}};}
+\DoxyCodeLine{00104\ \ \ \ \ \textcolor{keyword}{constexpr}\ \textcolor{keyword}{auto}\ GREEN\ =\ \textcolor{stringliteral}{"{}\(\backslash\)033[32m"{}};}
+\DoxyCodeLine{00105\ \ \ \ \ \textcolor{keyword}{constexpr}\ \textcolor{keyword}{auto}\ YELLOW\ =\ \textcolor{stringliteral}{"{}\(\backslash\)033[33m"{}};}
+\DoxyCodeLine{00106\ \ \ \ \ \textcolor{keyword}{constexpr}\ \textcolor{keyword}{auto}\ BLUE\ =\ \textcolor{stringliteral}{"{}\(\backslash\)033[34m"{}};}
+\DoxyCodeLine{00107\ \ \ \ \ \textcolor{keyword}{constexpr}\ \textcolor{keyword}{auto}\ PURPLE\ =\ \textcolor{stringliteral}{"{}\(\backslash\)033[35m"{}};}
+\DoxyCodeLine{00108\ \ \ \ \ \textcolor{keyword}{constexpr}\ \textcolor{keyword}{auto}\ CYAN\ =\ \textcolor{stringliteral}{"{}\(\backslash\)033[36m"{}};}
+\DoxyCodeLine{00109\ \ \ \ \ \textcolor{keyword}{constexpr}\ \textcolor{keyword}{auto}\ WHITE\ =\ \textcolor{stringliteral}{"{}\(\backslash\)033[37m"{}};}
+\DoxyCodeLine{00111\ }
+\DoxyCodeLine{00114\ \ \ \ \ \textcolor{keyword}{constexpr}\ \textcolor{keyword}{auto}\ DEFAULT\_FG\ =\ \textcolor{stringliteral}{"{}\(\backslash\)033[39m"{}};}
+\DoxyCodeLine{00116\ }
+\DoxyCodeLine{00119\ \ \ \ \ \textcolor{keyword}{constexpr}\ \textcolor{keyword}{auto}\ BG\_BLACK\ =\ \textcolor{stringliteral}{"{}\(\backslash\)033[40m"{}};}
+\DoxyCodeLine{00120\ \ \ \ \ \textcolor{keyword}{constexpr}\ \textcolor{keyword}{auto}\ BG\_RED\ =\ \textcolor{stringliteral}{"{}\(\backslash\)033[41m"{}};}
+\DoxyCodeLine{00121\ \ \ \ \ \textcolor{keyword}{constexpr}\ \textcolor{keyword}{auto}\ BG\_GREEN\ =\ \textcolor{stringliteral}{"{}\(\backslash\)033[42m"{}};}
+\DoxyCodeLine{00122\ \ \ \ \ \textcolor{keyword}{constexpr}\ \textcolor{keyword}{auto}\ BG\_YELLOW\ =\ \textcolor{stringliteral}{"{}\(\backslash\)033[43m"{}};}
+\DoxyCodeLine{00123\ \ \ \ \ \textcolor{keyword}{constexpr}\ \textcolor{keyword}{auto}\ BG\_BLUE\ =\ \textcolor{stringliteral}{"{}\(\backslash\)033[44m"{}};}
+\DoxyCodeLine{00124\ \ \ \ \ \textcolor{keyword}{constexpr}\ \textcolor{keyword}{auto}\ BG\_MAGENTA\ =\ \textcolor{stringliteral}{"{}\(\backslash\)033[45m"{}};}
+\DoxyCodeLine{00125\ \ \ \ \ \textcolor{keyword}{constexpr}\ \textcolor{keyword}{auto}\ BG\_CYAN\ =\ \textcolor{stringliteral}{"{}\(\backslash\)033[46m"{}};}
+\DoxyCodeLine{00126\ \ \ \ \ \textcolor{keyword}{constexpr}\ \textcolor{keyword}{auto}\ BG\_WHITE\ =\ \textcolor{stringliteral}{"{}\(\backslash\)033[47m"{}};}
+\DoxyCodeLine{00128\ }
+\DoxyCodeLine{00131\ \ \ \ \ \textcolor{keyword}{constexpr}\ \textcolor{keyword}{auto}\ DEFAULT\_BG\ =\ \textcolor{stringliteral}{"{}\(\backslash\)033[49m"{}};}
+\DoxyCodeLine{00132\ }
+\DoxyCodeLine{00135\ \ \ \ \ \textcolor{keyword}{constexpr}\ \textcolor{keyword}{auto}\ FRAMED\ =\ \textcolor{stringliteral}{"{}\(\backslash\)033[51m"{}};}
+\DoxyCodeLine{00136\ \ \ \ \ \textcolor{keyword}{constexpr}\ \textcolor{keyword}{auto}\ ENCIRCLED\ =\ \textcolor{stringliteral}{"{}\(\backslash\)033[52m"{}};}
+\DoxyCodeLine{00137\ \ \ \ \ \textcolor{keyword}{constexpr}\ \textcolor{keyword}{auto}\ OVERLINED\ =\ \textcolor{stringliteral}{"{}\(\backslash\)033[53m"{}};}
+\DoxyCodeLine{00138\ \ \ \ \ \textcolor{keyword}{constexpr}\ \textcolor{keyword}{auto}\ NO\_FRAME\_ENCIRCLE\ =\ \textcolor{stringliteral}{"{}\(\backslash\)033[54m"{}};}
+\DoxyCodeLine{00139\ \ \ \ \ \textcolor{keyword}{constexpr}\ \textcolor{keyword}{auto}\ NO\_OVERLINE\ =\ \textcolor{stringliteral}{"{}\(\backslash\)033[55m"{}};}
+\DoxyCodeLine{00141\ }
+\DoxyCodeLine{00144\ \ \ \ \ \textcolor{keyword}{constexpr}\ \textcolor{keyword}{auto}\ BRIGHT\_BLACK\ =\ \textcolor{stringliteral}{"{}\(\backslash\)033[90m"{}};}
+\DoxyCodeLine{00145\ \ \ \ \ \textcolor{keyword}{constexpr}\ \textcolor{keyword}{auto}\ BRIGHT\_RED\ =\ \textcolor{stringliteral}{"{}\(\backslash\)033[91m"{}};}
+\DoxyCodeLine{00146\ \ \ \ \ \textcolor{keyword}{constexpr}\ \textcolor{keyword}{auto}\ BRIGHT\_GREEN\ =\ \textcolor{stringliteral}{"{}\(\backslash\)033[92m"{}};}
+\DoxyCodeLine{00147\ \ \ \ \ \textcolor{keyword}{constexpr}\ \textcolor{keyword}{auto}\ BRIGHT\_YELLOW\ =\ \textcolor{stringliteral}{"{}\(\backslash\)033[93m"{}};}
+\DoxyCodeLine{00148\ \ \ \ \ \textcolor{keyword}{constexpr}\ \textcolor{keyword}{auto}\ BRIGHT\_BLUE\ =\ \textcolor{stringliteral}{"{}\(\backslash\)033[94m"{}};}
+\DoxyCodeLine{00149\ \ \ \ \ \textcolor{keyword}{constexpr}\ \textcolor{keyword}{auto}\ BRIGHT\_MAGENTA\ =\ \textcolor{stringliteral}{"{}\(\backslash\)033[95m"{}};}
+\DoxyCodeLine{00150\ \ \ \ \ \textcolor{keyword}{constexpr}\ \textcolor{keyword}{auto}\ BRIGHT\_CYAN\ =\ \textcolor{stringliteral}{"{}\(\backslash\)033[96m"{}};}
+\DoxyCodeLine{00151\ \ \ \ \ \textcolor{keyword}{constexpr}\ \textcolor{keyword}{auto}\ BRIGHT\_WHITE\ =\ \textcolor{stringliteral}{"{}\(\backslash\)033[97m"{}};}
+\DoxyCodeLine{00153\ }
+\DoxyCodeLine{00156\ \ \ \ \ \textcolor{keyword}{constexpr}\ \textcolor{keyword}{auto}\ BG\_BRIGHT\_BLACK\ =\ \textcolor{stringliteral}{"{}\(\backslash\)033[100m"{}};}
+\DoxyCodeLine{00157\ \ \ \ \ \textcolor{keyword}{constexpr}\ \textcolor{keyword}{auto}\ BG\_BRIGHT\_RED\ =\ \textcolor{stringliteral}{"{}\(\backslash\)033[101m"{}};}
+\DoxyCodeLine{00158\ \ \ \ \ \textcolor{keyword}{constexpr}\ \textcolor{keyword}{auto}\ BG\_BRIGHT\_GREEN\ =\ \textcolor{stringliteral}{"{}\(\backslash\)033[102m"{}};}
+\DoxyCodeLine{00159\ \ \ \ \ \textcolor{keyword}{constexpr}\ \textcolor{keyword}{auto}\ BG\_BRIGHT\_YELLOW\ =\ \textcolor{stringliteral}{"{}\(\backslash\)033[103m"{}};}
+\DoxyCodeLine{00160\ \ \ \ \ \textcolor{keyword}{constexpr}\ \textcolor{keyword}{auto}\ BG\_BRIGHT\_BLUE\ =\ \textcolor{stringliteral}{"{}\(\backslash\)033[104m"{}};}
+\DoxyCodeLine{00161\ \ \ \ \ \textcolor{keyword}{constexpr}\ \textcolor{keyword}{auto}\ BG\_BRIGHT\_MAGENTA\ =\ \textcolor{stringliteral}{"{}\(\backslash\)033[105m"{}};}
+\DoxyCodeLine{00162\ \ \ \ \ \textcolor{keyword}{constexpr}\ \textcolor{keyword}{auto}\ BG\_BRIGHT\_CYAN\ =\ \textcolor{stringliteral}{"{}\(\backslash\)033[106m"{}};}
+\DoxyCodeLine{00163\ \ \ \ \ \textcolor{keyword}{constexpr}\ \textcolor{keyword}{auto}\ BG\_BRIGHT\_WHITE\ =\ \textcolor{stringliteral}{"{}\(\backslash\)033[107m"{}};}
+\DoxyCodeLine{00165\ }
+\DoxyCodeLine{00166\ }
+\DoxyCodeLine{00175\ \ \ \ \ \textcolor{keyword}{inline}\ std::string\ \mbox{\hyperlink{namespacecolor_aadc73cda4afb4935604ca432d2fe0f9f}{fg\_256}}(\textcolor{keywordtype}{int}\ \mbox{\hyperlink{namespacecolor}{color}})\ \{}
+\DoxyCodeLine{00176\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}\(\backslash\)033[38;5;"{}}\ +\ std::to\_string(\mbox{\hyperlink{namespacecolor}{color}})\ +\ \textcolor{stringliteral}{"{}m"{}};}
+\DoxyCodeLine{00177\ \ \ \ \ \}}
+\DoxyCodeLine{00178\ }
+\DoxyCodeLine{00187\ \ \ \ \ \textcolor{keyword}{inline}\ std::string\ \mbox{\hyperlink{namespacecolor_aad7d97ecc2203a7d697f4ee8a21c47e7}{bg\_256}}(\textcolor{keywordtype}{int}\ \mbox{\hyperlink{namespacecolor}{color}})\ \{}
+\DoxyCodeLine{00188\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}\(\backslash\)033[48;5;"{}}\ +\ std::to\_string(\mbox{\hyperlink{namespacecolor}{color}})\ +\ \textcolor{stringliteral}{"{}m"{}};}
+\DoxyCodeLine{00189\ \ \ \ \ \}}
+\DoxyCodeLine{00190\ }
+\DoxyCodeLine{00201\ \ \ \ \ \textcolor{keyword}{inline}\ std::string\ \mbox{\hyperlink{namespacecolor_aefe566c8b7cb4ad17c6b5af46d9a2748}{fg\_rgb}}(\textcolor{keywordtype}{int}\ r,\ \textcolor{keywordtype}{int}\ g,\ \textcolor{keywordtype}{int}\ b)\ \{}
+\DoxyCodeLine{00202\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}\(\backslash\)033[38;2;"{}}\ +\ std::to\_string(r)\ +\ \textcolor{stringliteral}{"{};"{}}}
+\DoxyCodeLine{00203\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ +\ std::to\_string(g)\ +\ \textcolor{stringliteral}{"{};"{}}}
+\DoxyCodeLine{00204\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ +\ std::to\_string(b)\ +\ \textcolor{stringliteral}{"{}m"{}};}
+\DoxyCodeLine{00205\ \ \ \ \ \}}
+\DoxyCodeLine{00206\ }
+\DoxyCodeLine{00217\ \ \ \ \ \textcolor{keyword}{inline}\ std::string\ \mbox{\hyperlink{namespacecolor_af647083dc6f1e4ba06f8f6be1530cc5f}{bg\_rgb}}(\textcolor{keywordtype}{int}\ r,\ \textcolor{keywordtype}{int}\ g,\ \textcolor{keywordtype}{int}\ b)\ \{}
+\DoxyCodeLine{00218\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}\(\backslash\)033[48;2;"{}}\ +\ std::to\_string(r)\ +\ \textcolor{stringliteral}{"{};"{}}}
+\DoxyCodeLine{00219\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ +\ std::to\_string(g)\ +\ \textcolor{stringliteral}{"{};"{}}}
+\DoxyCodeLine{00220\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ +\ std::to\_string(b)\ +\ \textcolor{stringliteral}{"{}m"{}};}
+\DoxyCodeLine{00221\ \ \ \ \ \}}
+\DoxyCodeLine{00222\ }
+\DoxyCodeLine{00223\ }
+\DoxyCodeLine{00230\ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00231\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{namespacecolor_ae62dd84561ca8a3226a5c6b4a0bb4eb3}{printc}}(\textcolor{keyword}{const}\ std::string\&\ \mbox{\hyperlink{namespacecolor}{color}},\ \textcolor{keyword}{const}\ T\&\ text)\ \{}
+\DoxyCodeLine{00232\ \ \ \ \ \ \ \ \ std::cout\ <<\ \mbox{\hyperlink{namespacecolor}{color}}\ <<\ text\ <<\ \mbox{\hyperlink{namespacecolor_a20fa8cb242d8c7f1420307a0a71e7de7}{RESET}}\ <<\ std::endl;}
+\DoxyCodeLine{00233\ \ \ \ \ \}}
+\DoxyCodeLine{00234\ }
+\DoxyCodeLine{00241\ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00242\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{namespacecolor_aee7cc00b6962b257bb02d1ba429acc8c}{printcf}}(\textcolor{keyword}{const}\ std::string\&\ \mbox{\hyperlink{namespacecolor}{color}},\ \textcolor{keyword}{const}\ T\&\ text)\ \{}
+\DoxyCodeLine{00243\ \ \ \ \ \ \ \ \ std::cout\ <<\ \mbox{\hyperlink{namespacecolor}{color}}\ <<\ text\ <<\ \mbox{\hyperlink{namespacecolor_a20fa8cb242d8c7f1420307a0a71e7de7}{RESET}};}
+\DoxyCodeLine{00244\ \ \ \ \ \}}
+\DoxyCodeLine{00245\ }
+\DoxyCodeLine{00259\ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00260\ \ \ \ \ std::string\ \mbox{\hyperlink{namespacecolor_aafd20e63e8e1b44e97162d7cd43051a9}{colorize}}(\textcolor{keyword}{const}\ std::string\&\ \mbox{\hyperlink{namespacecolor}{color}},\ \textcolor{keyword}{const}\ T\&\ text)\ \{}
+\DoxyCodeLine{00261\ \ \ \ \ \ \ \ \ std::ostringstream\ oss;}
+\DoxyCodeLine{00262\ \ \ \ \ \ \ \ \ oss\ <<\ \mbox{\hyperlink{namespacecolor}{color}}\ <<\ text\ <<\ \mbox{\hyperlink{namespacecolor_a20fa8cb242d8c7f1420307a0a71e7de7}{RESET}};}
+\DoxyCodeLine{00263\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ oss.str();}
+\DoxyCodeLine{00264\ \ \ \ \ \}}
+\DoxyCodeLine{00265\ }
+\DoxyCodeLine{00272\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{namespacecolor_a08ca38d06f4a5b69a56406e61322f410}{progress\_bar}}(\textcolor{keywordtype}{float}\ percentage,\ \textcolor{keywordtype}{int}\ width\ =\ 50,}
+\DoxyCodeLine{00273\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::string\&\ \mbox{\hyperlink{namespacecolor}{color}}\ =\ BRIGHT\_GREEN)\ \{}
+\DoxyCodeLine{00274\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ pos\ =\ \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{int}\textcolor{keyword}{>}(width\ *\ percentage\ /\ 100.0);}
+\DoxyCodeLine{00275\ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}["{}};}
+\DoxyCodeLine{00276\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ width;\ ++i)\ \{}
+\DoxyCodeLine{00277\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (i\ <\ pos)\ std::cout\ <<\ \mbox{\hyperlink{namespacecolor}{color}}\ <<\ \textcolor{stringliteral}{"{}="{}};}
+\DoxyCodeLine{00278\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ std::cout\ <<\ \textcolor{stringliteral}{"{}\ "{}};}
+\DoxyCodeLine{00279\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00280\ \ \ \ \ \ \ \ \ std::cout\ <<\ \mbox{\hyperlink{namespacecolor_a20fa8cb242d8c7f1420307a0a71e7de7}{RESET}}\ <<\ \textcolor{stringliteral}{"{}]\ "{}}\ <<\ int(percentage)\ <<\ \textcolor{stringliteral}{"{}\ \%\(\backslash\)r"{}};}
+\DoxyCodeLine{00281\ \ \ \ \ \ \ \ \ std::cout.flush();}
+\DoxyCodeLine{00282\ }
+\DoxyCodeLine{00283\ \ \ \ \ \}}
+\DoxyCodeLine{00284\ \}}
+\DoxyCodeLine{00285\ }
+\DoxyCodeLine{00286\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//TERCOL\_LIBRARY\_H}}
+
+\end{DoxyCode}

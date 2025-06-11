@@ -1,0 +1,484 @@
+\doxysection{color Namespace Reference}
+\hypertarget{namespacecolor}{}\label{namespacecolor}\index{color@{color}}
+
+
+Contains ANSI escape sequences and printing utilities for terminal styling.  
+
+
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{namespacecolor_aadc73cda4afb4935604ca432d2fe0f9f}{fg\+\_\+256}} (int color)
+\begin{DoxyCompactList}\small\item\em Generates ANSI escape code for 256-\/color foreground. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{namespacecolor_aad7d97ecc2203a7d697f4ee8a21c47e7}{bg\+\_\+256}} (int color)
+\begin{DoxyCompactList}\small\item\em Generates ANSI escape code for 256-\/color background. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{namespacecolor_aefe566c8b7cb4ad17c6b5af46d9a2748}{fg\+\_\+rgb}} (int r, int g, int b)
+\begin{DoxyCompactList}\small\item\em Generates ANSI escape code for RGB true-\/color FOREGROUND. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{namespacecolor_af647083dc6f1e4ba06f8f6be1530cc5f}{bg\+\_\+rgb}} (int r, int g, int b)
+\begin{DoxyCompactList}\small\item\em Generates ANSI escape code for RGB true-\/color BACKGROUND. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T$>$ }\\void \mbox{\hyperlink{namespacecolor_ae62dd84561ca8a3226a5c6b4a0bb4eb3}{printc}} (const std\+::string \&color, const T \&text)
+\begin{DoxyCompactList}\small\item\em Prints the given text with a color followed by a newline. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T$>$ }\\void \mbox{\hyperlink{namespacecolor_aee7cc00b6962b257bb02d1ba429acc8c}{printcf}} (const std\+::string \&color, const T \&text)
+\begin{DoxyCompactList}\small\item\em Prints the given text with a color without adding a newline. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T$>$ }\\std\+::string \mbox{\hyperlink{namespacecolor_aafd20e63e8e1b44e97162d7cd43051a9}{colorize}} (const std\+::string \&color, const T \&text)
+\begin{DoxyCompactList}\small\item\em Builds and returns a colored string without printing it. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{namespacecolor_a08ca38d06f4a5b69a56406e61322f410}{progress\+\_\+bar}} (float percentage, int width=50, const std\+::string \&color=BRIGHT\+\_\+\+GREEN)
+\begin{DoxyCompactList}\small\item\em Displays a colored progress bar on the terminal. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{Indent}\textbf{ RESET CODE}\par
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{namespacecolor_a20fa8cb242d8c7f1420307a0a71e7de7}\label{namespacecolor_a20fa8cb242d8c7f1420307a0a71e7de7} 
+constexpr auto {\bfseries RESET} = "{}\textbackslash{}033\mbox{[}0m"{}
+\begin{DoxyCompactList}\small\item\em ALL ATTRIBUTES BECOME TURNED OFF. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}\textbf{ TEXT ATTRIBUTES}\par
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{namespacecolor_a4848db40f699c2d1f6c3ab8751842dfa}\label{namespacecolor_a4848db40f699c2d1f6c3ab8751842dfa} 
+constexpr auto {\bfseries BOLD} = "{}\textbackslash{}033\mbox{[}1m"{}
+\item 
+\Hypertarget{namespacecolor_a212b699393a3c054bd82dfeb1df3b9e7}\label{namespacecolor_a212b699393a3c054bd82dfeb1df3b9e7} 
+constexpr auto {\bfseries DIM} = "{}\textbackslash{}033\mbox{[}2m"{}
+\item 
+\Hypertarget{namespacecolor_a568fe3fe677654be1c3700c4c25d4af1}\label{namespacecolor_a568fe3fe677654be1c3700c4c25d4af1} 
+constexpr auto {\bfseries ITALIC} = "{}\textbackslash{}033\mbox{[}3m"{}
+\begin{DoxyCompactList}\small\item\em NOT WIDELY SUPPORTED. Sometimes treated as inverse or blink. \end{DoxyCompactList}\item 
+\Hypertarget{namespacecolor_ae9223af19506960c4f697f50da0f1f9d}\label{namespacecolor_ae9223af19506960c4f697f50da0f1f9d} 
+constexpr auto {\bfseries UNDERLINE} = "{}\textbackslash{}033\mbox{[}4m"{}
+\item 
+\Hypertarget{namespacecolor_ad936897bb123603a16f4f5b8e71c18d5}\label{namespacecolor_ad936897bb123603a16f4f5b8e71c18d5} 
+constexpr auto {\bfseries BLINK} = "{}\textbackslash{}033\mbox{[}5m"{}
+\begin{DoxyCompactList}\small\item\em Sets blinking to \texorpdfstring{$<$}{<}150 times per minute. \end{DoxyCompactList}\item 
+\Hypertarget{namespacecolor_a4c8d8be0db979b3a2c527d567e8f9de2}\label{namespacecolor_a4c8d8be0db979b3a2c527d567e8f9de2} 
+constexpr auto {\bfseries RAPID\+\_\+\+BLINK} = "{}\textbackslash{}033\mbox{[}6m"{}
+\begin{DoxyCompactList}\small\item\em NOT WIDELY SUPPORTED. \end{DoxyCompactList}\item 
+\Hypertarget{namespacecolor_a89524f0bdd193cb42e05edd1c4ff8706}\label{namespacecolor_a89524f0bdd193cb42e05edd1c4ff8706} 
+constexpr auto {\bfseries REVERSE} = "{}\textbackslash{}033\mbox{[}7m"{}
+\item 
+\Hypertarget{namespacecolor_aa32405f144df01c27f4a798d0b213af3}\label{namespacecolor_aa32405f144df01c27f4a798d0b213af3} 
+constexpr auto {\bfseries HIDE} = "{}\textbackslash{}033\mbox{[}8m"{}
+\begin{DoxyCompactList}\small\item\em \texorpdfstring{$<$}{<}Swap foreground and background colors \end{DoxyCompactList}\item 
+constexpr auto \mbox{\hyperlink{namespacecolor_af111a4e552f4017bedf28f33d134741c}{STRIKETHROUGH}} = "{}\textbackslash{}033\mbox{[}9m"{}
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}\textbf{ Font Selection. Not widely supported}\par
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{namespacecolor_a9dcec6da987b3d60bb49a89be95e8d32}\label{namespacecolor_a9dcec6da987b3d60bb49a89be95e8d32} 
+constexpr auto {\bfseries PRIMARY\+\_\+\+FONT} = "{}\textbackslash{}033\mbox{[}10m"{}
+\item 
+\Hypertarget{namespacecolor_a83570fa2e4d27e243535115906e7f9b7}\label{namespacecolor_a83570fa2e4d27e243535115906e7f9b7} 
+constexpr auto {\bfseries FONT\+\_\+1} = "{}\textbackslash{}033\mbox{[}11m"{}
+\item 
+\Hypertarget{namespacecolor_ac18bd067d788fe4c62f239314b612d8e}\label{namespacecolor_ac18bd067d788fe4c62f239314b612d8e} 
+constexpr auto {\bfseries FONT\+\_\+2} = "{}\textbackslash{}033\mbox{[}12m"{}
+\item 
+\Hypertarget{namespacecolor_a08d6b4df92d979963c7302b03daeb13d}\label{namespacecolor_a08d6b4df92d979963c7302b03daeb13d} 
+constexpr auto {\bfseries FONT\+\_\+3} = "{}\textbackslash{}033\mbox{[}13m"{}
+\item 
+\Hypertarget{namespacecolor_ada4c6c62abb153a6c8f0204d90f0561f}\label{namespacecolor_ada4c6c62abb153a6c8f0204d90f0561f} 
+constexpr auto {\bfseries FONT\+\_\+4} = "{}\textbackslash{}033\mbox{[}14m"{}
+\item 
+\Hypertarget{namespacecolor_a3077515804742e5251df962000a57e17}\label{namespacecolor_a3077515804742e5251df962000a57e17} 
+constexpr auto {\bfseries FONT\+\_\+5} = "{}\textbackslash{}033\mbox{[}15m"{}
+\item 
+\Hypertarget{namespacecolor_aecacf3b439a2d2c3b3169fcb3d4cd0d3}\label{namespacecolor_aecacf3b439a2d2c3b3169fcb3d4cd0d3} 
+constexpr auto {\bfseries FONT\+\_\+6} = "{}\textbackslash{}033\mbox{[}16m"{}
+\item 
+\Hypertarget{namespacecolor_a1813ff61461797aad47c7231c186b923}\label{namespacecolor_a1813ff61461797aad47c7231c186b923} 
+constexpr auto {\bfseries FONT\+\_\+7} = "{}\textbackslash{}033\mbox{[}17m"{}
+\item 
+\Hypertarget{namespacecolor_a352c4065a973f270b8ddeaddea106fea}\label{namespacecolor_a352c4065a973f270b8ddeaddea106fea} 
+constexpr auto {\bfseries FONT\+\_\+8} = "{}\textbackslash{}033\mbox{[}18m"{}
+\item 
+\Hypertarget{namespacecolor_ac4142f7513aa93e443d59be8c5db84c3}\label{namespacecolor_ac4142f7513aa93e443d59be8c5db84c3} 
+constexpr auto {\bfseries FONT\+\_\+9} = "{}\textbackslash{}033\mbox{[}19m"{}
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}\textbf{ ATTRIBUTE RESETS}\par
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{namespacecolor_abe4560af24e82f09608e8e9ae7697196}\label{namespacecolor_abe4560af24e82f09608e8e9ae7697196} 
+constexpr auto {\bfseries NORMAL\+\_\+\+INTENSITY} = "{}\textbackslash{}033\mbox{[}22m"{}
+\item 
+constexpr auto \mbox{\hyperlink{namespacecolor_ace740120b460c1d0b42beef87e862374}{NO\+\_\+\+BOLD}} = "{}\textbackslash{}033\mbox{[}22m"{}
+\item 
+\Hypertarget{namespacecolor_a69513443de76bcb3722f9d525ec60f4b}\label{namespacecolor_a69513443de76bcb3722f9d525ec60f4b} 
+constexpr auto {\bfseries NO\+\_\+\+ITALIC} = "{}\textbackslash{}033\mbox{[}23m"{}
+\item 
+\Hypertarget{namespacecolor_aec84896c59d5e8ee3a9c07ef24d01d35}\label{namespacecolor_aec84896c59d5e8ee3a9c07ef24d01d35} 
+constexpr auto {\bfseries NO\+\_\+\+UNDERLINE} = "{}\textbackslash{}033\mbox{[}24m"{}
+\item 
+\Hypertarget{namespacecolor_a120b824c85a0d4401406ca498bf2183b}\label{namespacecolor_a120b824c85a0d4401406ca498bf2183b} 
+constexpr auto {\bfseries NO\+\_\+\+BLINK} = "{}\textbackslash{}033\mbox{[}25m"{}
+\item 
+\Hypertarget{namespacecolor_a6eef7c06ff4862a669a896ce7d3f7ee3}\label{namespacecolor_a6eef7c06ff4862a669a896ce7d3f7ee3} 
+constexpr auto {\bfseries NO\+\_\+\+REVERSE} = "{}\textbackslash{}033\mbox{[}27m"{}
+\item 
+\Hypertarget{namespacecolor_aac6e96a77ef3a9f84887712ac0a04045}\label{namespacecolor_aac6e96a77ef3a9f84887712ac0a04045} 
+constexpr auto {\bfseries NO\+\_\+\+HIDE} = "{}\textbackslash{}033\mbox{[}28m"{}
+\item 
+\Hypertarget{namespacecolor_ac63780e824f28593aa4f323b4e7f313b}\label{namespacecolor_ac63780e824f28593aa4f323b4e7f313b} 
+constexpr auto {\bfseries NO\+\_\+\+STRIKETHROUGH} = "{}\textbackslash{}033\mbox{[}29m"{}
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}\textbf{ STANDARD FOREGROUND COLORS}\par
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{namespacecolor_ab1127558cd80914cd29d591b7b77a95d}\label{namespacecolor_ab1127558cd80914cd29d591b7b77a95d} 
+constexpr auto {\bfseries BLACK} = "{}\textbackslash{}033\mbox{[}30m"{}
+\item 
+\Hypertarget{namespacecolor_a9f175f509b951d1d9de96461125b1282}\label{namespacecolor_a9f175f509b951d1d9de96461125b1282} 
+constexpr auto {\bfseries RED} = "{}\textbackslash{}033\mbox{[}31m"{}
+\item 
+\Hypertarget{namespacecolor_a144f5cf2607c0394182bea8a39eceb73}\label{namespacecolor_a144f5cf2607c0394182bea8a39eceb73} 
+constexpr auto {\bfseries GREEN} = "{}\textbackslash{}033\mbox{[}32m"{}
+\item 
+\Hypertarget{namespacecolor_abf743a8718e2a7c5b6c262074d552106}\label{namespacecolor_abf743a8718e2a7c5b6c262074d552106} 
+constexpr auto {\bfseries YELLOW} = "{}\textbackslash{}033\mbox{[}33m"{}
+\item 
+\Hypertarget{namespacecolor_a332251486512f3bee8d075d81466d4d5}\label{namespacecolor_a332251486512f3bee8d075d81466d4d5} 
+constexpr auto {\bfseries BLUE} = "{}\textbackslash{}033\mbox{[}34m"{}
+\item 
+\Hypertarget{namespacecolor_a7c1a16b71f87f5c675cf5d8fa3f4eadf}\label{namespacecolor_a7c1a16b71f87f5c675cf5d8fa3f4eadf} 
+constexpr auto {\bfseries PURPLE} = "{}\textbackslash{}033\mbox{[}35m"{}
+\item 
+\Hypertarget{namespacecolor_abb792d8e383adcb7715729f7c4cd6e7a}\label{namespacecolor_abb792d8e383adcb7715729f7c4cd6e7a} 
+constexpr auto {\bfseries CYAN} = "{}\textbackslash{}033\mbox{[}36m"{}
+\item 
+\Hypertarget{namespacecolor_aab8dae630fea00a48e78466977b2dc5d}\label{namespacecolor_aab8dae630fea00a48e78466977b2dc5d} 
+constexpr auto {\bfseries WHITE} = "{}\textbackslash{}033\mbox{[}37m"{}
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}\textbf{ RESET FOREGROUND COLOR}\par
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{namespacecolor_a95c17a4c2c9d944f333a6d55f420eee7}\label{namespacecolor_a95c17a4c2c9d944f333a6d55f420eee7} 
+constexpr auto {\bfseries DEFAULT\+\_\+\+FG} = "{}\textbackslash{}033\mbox{[}39m"{}
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}\textbf{ STANDARD BACKGROUND COLORS}\par
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{namespacecolor_ab19f8f807a3da326a09233a08973fee7}\label{namespacecolor_ab19f8f807a3da326a09233a08973fee7} 
+constexpr auto {\bfseries BG\+\_\+\+BLACK} = "{}\textbackslash{}033\mbox{[}40m"{}
+\item 
+\Hypertarget{namespacecolor_a833620d87eedbbecfca1286c1a1dff93}\label{namespacecolor_a833620d87eedbbecfca1286c1a1dff93} 
+constexpr auto {\bfseries BG\+\_\+\+RED} = "{}\textbackslash{}033\mbox{[}41m"{}
+\item 
+\Hypertarget{namespacecolor_a5cccd8a6915c9cb681adb10f4bf3d5a5}\label{namespacecolor_a5cccd8a6915c9cb681adb10f4bf3d5a5} 
+constexpr auto {\bfseries BG\+\_\+\+GREEN} = "{}\textbackslash{}033\mbox{[}42m"{}
+\item 
+\Hypertarget{namespacecolor_a0d894e2e9cdf22cc8e06f88805456844}\label{namespacecolor_a0d894e2e9cdf22cc8e06f88805456844} 
+constexpr auto {\bfseries BG\+\_\+\+YELLOW} = "{}\textbackslash{}033\mbox{[}43m"{}
+\item 
+\Hypertarget{namespacecolor_a557176fe658137c08f93c66868ee9152}\label{namespacecolor_a557176fe658137c08f93c66868ee9152} 
+constexpr auto {\bfseries BG\+\_\+\+BLUE} = "{}\textbackslash{}033\mbox{[}44m"{}
+\item 
+\Hypertarget{namespacecolor_a6b5881365dce5b23095ba12ce5cc3ce7}\label{namespacecolor_a6b5881365dce5b23095ba12ce5cc3ce7} 
+constexpr auto {\bfseries BG\+\_\+\+MAGENTA} = "{}\textbackslash{}033\mbox{[}45m"{}
+\item 
+\Hypertarget{namespacecolor_acf97b24cc76093acf81557bfefc3f9af}\label{namespacecolor_acf97b24cc76093acf81557bfefc3f9af} 
+constexpr auto {\bfseries BG\+\_\+\+CYAN} = "{}\textbackslash{}033\mbox{[}46m"{}
+\item 
+\Hypertarget{namespacecolor_aafd61ab3756bbcd03a2d421b85553703}\label{namespacecolor_aafd61ab3756bbcd03a2d421b85553703} 
+constexpr auto {\bfseries BG\+\_\+\+WHITE} = "{}\textbackslash{}033\mbox{[}47m"{}
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}\textbf{ RESET BACKGROUND COLOR}\par
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{namespacecolor_a612c79ea599930846fb898f4ab8c7960}\label{namespacecolor_a612c79ea599930846fb898f4ab8c7960} 
+constexpr auto {\bfseries DEFAULT\+\_\+\+BG} = "{}\textbackslash{}033\mbox{[}49m"{}
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}\textbf{ DECORATIVE (Limited support)}\par
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{namespacecolor_aff0c048528cfd10d3da24529533a388c}\label{namespacecolor_aff0c048528cfd10d3da24529533a388c} 
+constexpr auto {\bfseries FRAMED} = "{}\textbackslash{}033\mbox{[}51m"{}
+\item 
+\Hypertarget{namespacecolor_a4a927ac9636d13feec3f2b056e8511b5}\label{namespacecolor_a4a927ac9636d13feec3f2b056e8511b5} 
+constexpr auto {\bfseries ENCIRCLED} = "{}\textbackslash{}033\mbox{[}52m"{}
+\item 
+\Hypertarget{namespacecolor_a5b8d88ac974db4895dc4477a1cb4e944}\label{namespacecolor_a5b8d88ac974db4895dc4477a1cb4e944} 
+constexpr auto {\bfseries OVERLINED} = "{}\textbackslash{}033\mbox{[}53m"{}
+\item 
+\Hypertarget{namespacecolor_a659c8591c37c88ec7448398c50257f30}\label{namespacecolor_a659c8591c37c88ec7448398c50257f30} 
+constexpr auto {\bfseries NO\+\_\+\+FRAME\+\_\+\+ENCIRCLE} = "{}\textbackslash{}033\mbox{[}54m"{}
+\item 
+\Hypertarget{namespacecolor_acf9eac1d5c7261411fc881dbf199ed86}\label{namespacecolor_acf9eac1d5c7261411fc881dbf199ed86} 
+constexpr auto {\bfseries NO\+\_\+\+OVERLINE} = "{}\textbackslash{}033\mbox{[}55m"{}
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}\textbf{ BRIGHT COLORS (High intensity)}\par
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{namespacecolor_a6093d1fe32335f1326d5c4ecef9627c1}\label{namespacecolor_a6093d1fe32335f1326d5c4ecef9627c1} 
+constexpr auto {\bfseries BRIGHT\+\_\+\+BLACK} = "{}\textbackslash{}033\mbox{[}90m"{}
+\item 
+\Hypertarget{namespacecolor_a02b0541e22483e733fb3082f052bd113}\label{namespacecolor_a02b0541e22483e733fb3082f052bd113} 
+constexpr auto {\bfseries BRIGHT\+\_\+\+RED} = "{}\textbackslash{}033\mbox{[}91m"{}
+\item 
+\Hypertarget{namespacecolor_a5128bb80cf55fa6ebf27527afc7b6d2a}\label{namespacecolor_a5128bb80cf55fa6ebf27527afc7b6d2a} 
+constexpr auto {\bfseries BRIGHT\+\_\+\+GREEN} = "{}\textbackslash{}033\mbox{[}92m"{}
+\item 
+\Hypertarget{namespacecolor_abdf71dde1a62b08e0fd9c6eda165e427}\label{namespacecolor_abdf71dde1a62b08e0fd9c6eda165e427} 
+constexpr auto {\bfseries BRIGHT\+\_\+\+YELLOW} = "{}\textbackslash{}033\mbox{[}93m"{}
+\item 
+\Hypertarget{namespacecolor_ad3f0f8657fad3f00ec5cf6880c3ac483}\label{namespacecolor_ad3f0f8657fad3f00ec5cf6880c3ac483} 
+constexpr auto {\bfseries BRIGHT\+\_\+\+BLUE} = "{}\textbackslash{}033\mbox{[}94m"{}
+\item 
+\Hypertarget{namespacecolor_a9043cfce731e02e134cea06c693f8e88}\label{namespacecolor_a9043cfce731e02e134cea06c693f8e88} 
+constexpr auto {\bfseries BRIGHT\+\_\+\+MAGENTA} = "{}\textbackslash{}033\mbox{[}95m"{}
+\item 
+\Hypertarget{namespacecolor_a364b9339cbf747e877139659973d7142}\label{namespacecolor_a364b9339cbf747e877139659973d7142} 
+constexpr auto {\bfseries BRIGHT\+\_\+\+CYAN} = "{}\textbackslash{}033\mbox{[}96m"{}
+\item 
+\Hypertarget{namespacecolor_a7667955572e8615bd9c85661d955159f}\label{namespacecolor_a7667955572e8615bd9c85661d955159f} 
+constexpr auto {\bfseries BRIGHT\+\_\+\+WHITE} = "{}\textbackslash{}033\mbox{[}97m"{}
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}\textbf{ BRIGHT BACKGROUNDS}\par
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{namespacecolor_a4d67d949afa727f6e8fbc987332f56b2}\label{namespacecolor_a4d67d949afa727f6e8fbc987332f56b2} 
+constexpr auto {\bfseries BG\+\_\+\+BRIGHT\+\_\+\+BLACK} = "{}\textbackslash{}033\mbox{[}100m"{}
+\item 
+\Hypertarget{namespacecolor_a90762631c61f603f111ea5cf34658259}\label{namespacecolor_a90762631c61f603f111ea5cf34658259} 
+constexpr auto {\bfseries BG\+\_\+\+BRIGHT\+\_\+\+RED} = "{}\textbackslash{}033\mbox{[}101m"{}
+\item 
+\Hypertarget{namespacecolor_a8deeae97824e36811c9f24b5cd7a692e}\label{namespacecolor_a8deeae97824e36811c9f24b5cd7a692e} 
+constexpr auto {\bfseries BG\+\_\+\+BRIGHT\+\_\+\+GREEN} = "{}\textbackslash{}033\mbox{[}102m"{}
+\item 
+\Hypertarget{namespacecolor_a1e0a403b5f8830b123be23ef0cf2219a}\label{namespacecolor_a1e0a403b5f8830b123be23ef0cf2219a} 
+constexpr auto {\bfseries BG\+\_\+\+BRIGHT\+\_\+\+YELLOW} = "{}\textbackslash{}033\mbox{[}103m"{}
+\item 
+\Hypertarget{namespacecolor_af9c16d219266dfcc2fde64c46cd7ddc6}\label{namespacecolor_af9c16d219266dfcc2fde64c46cd7ddc6} 
+constexpr auto {\bfseries BG\+\_\+\+BRIGHT\+\_\+\+BLUE} = "{}\textbackslash{}033\mbox{[}104m"{}
+\item 
+\Hypertarget{namespacecolor_a86b637654208e8b7d3c60c9a3d5a86f4}\label{namespacecolor_a86b637654208e8b7d3c60c9a3d5a86f4} 
+constexpr auto {\bfseries BG\+\_\+\+BRIGHT\+\_\+\+MAGENTA} = "{}\textbackslash{}033\mbox{[}105m"{}
+\item 
+\Hypertarget{namespacecolor_a087d4bb2579bc721082fd1f0057f5438}\label{namespacecolor_a087d4bb2579bc721082fd1f0057f5438} 
+constexpr auto {\bfseries BG\+\_\+\+BRIGHT\+\_\+\+CYAN} = "{}\textbackslash{}033\mbox{[}106m"{}
+\item 
+\Hypertarget{namespacecolor_a465ea08fdf81b995a2eed523a3b32873}\label{namespacecolor_a465ea08fdf81b995a2eed523a3b32873} 
+constexpr auto {\bfseries BG\+\_\+\+BRIGHT\+\_\+\+WHITE} = "{}\textbackslash{}033\mbox{[}107m"{}
+\end{DoxyCompactItemize}
+\end{Indent}
+
+
+\doxysubsection{Detailed Description}
+Contains ANSI escape sequences and printing utilities for terminal styling. 
+
+\label{doc-func-members}
+\Hypertarget{namespacecolor_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{namespacecolor_aad7d97ecc2203a7d697f4ee8a21c47e7}\index{color@{color}!bg\_256@{bg\_256}}
+\index{bg\_256@{bg\_256}!color@{color}}
+\doxysubsubsection{\texorpdfstring{bg\_256()}{bg\_256()}}
+{\footnotesize\ttfamily \label{namespacecolor_aad7d97ecc2203a7d697f4ee8a21c47e7} 
+std\+::string color\+::bg\+\_\+256 (\begin{DoxyParamCaption}\item[{int}]{color}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Generates ANSI escape code for 256-\/color background. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em color} & An integer between 0 and 255 representing the desired background color. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\+::string ANSI escape sequence to set the terminal\textquotesingle{}s background color.
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+Requires terminal support for 256-\/color mode (e.\+g., xterm-\/compatible terminals). 
+\end{DoxyNote}
+\Hypertarget{namespacecolor_af647083dc6f1e4ba06f8f6be1530cc5f}\index{color@{color}!bg\_rgb@{bg\_rgb}}
+\index{bg\_rgb@{bg\_rgb}!color@{color}}
+\doxysubsubsection{\texorpdfstring{bg\_rgb()}{bg\_rgb()}}
+{\footnotesize\ttfamily \label{namespacecolor_af647083dc6f1e4ba06f8f6be1530cc5f} 
+std\+::string color\+::bg\+\_\+rgb (\begin{DoxyParamCaption}\item[{int}]{r}{, }\item[{int}]{g}{, }\item[{int}]{b}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Generates ANSI escape code for RGB true-\/color BACKGROUND. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em r} & Red component (0–255) \\
+\hline
+{\em g} & Green component (0–255) \\
+\hline
+{\em b} & Blue component (0–255) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\+::string ANSI escape sequence to set the terminal\textquotesingle{}s background color.
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+Requires terminal support for 24-\/bit true color (most modern terminals support this). 
+\end{DoxyNote}
+\Hypertarget{namespacecolor_aafd20e63e8e1b44e97162d7cd43051a9}\index{color@{color}!colorize@{colorize}}
+\index{colorize@{colorize}!color@{color}}
+\doxysubsubsection{\texorpdfstring{colorize()}{colorize()}}
+{\footnotesize\ttfamily \label{namespacecolor_aafd20e63e8e1b44e97162d7cd43051a9} 
+template$<$typename T$>$ \\
+std\+::string color\+::colorize (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{color}{, }\item[{const T \&}]{text}{}\end{DoxyParamCaption})}
+
+
+
+Builds and returns a colored string without printing it. 
+
+This function wraps the given text with ANSI color codes and returns it as a std\+::string. It is useful for preparing formatted output to be printed later.
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & The type of the text (e.\+g., std\+::string, int, float, etc.). \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em color} & The ANSI color escape code to use. \\
+\hline
+{\em text} & The content to wrap with color. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\+::string The formatted colored string with reset code.
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+The string is not printed to the terminal — it is returned to the caller. 
+\end{DoxyNote}
+\Hypertarget{namespacecolor_aadc73cda4afb4935604ca432d2fe0f9f}\index{color@{color}!fg\_256@{fg\_256}}
+\index{fg\_256@{fg\_256}!color@{color}}
+\doxysubsubsection{\texorpdfstring{fg\_256()}{fg\_256()}}
+{\footnotesize\ttfamily \label{namespacecolor_aadc73cda4afb4935604ca432d2fe0f9f} 
+std\+::string color\+::fg\+\_\+256 (\begin{DoxyParamCaption}\item[{int}]{color}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Generates ANSI escape code for 256-\/color foreground. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em color} & An integer between 0 and 255 representing the desired foreground color. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\+::string ANSI escape sequence to set the terminal\textquotesingle{}s foreground color.
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+Requires terminal support for 256-\/color mode (e.\+g., xterm-\/compatible terminals). 
+\end{DoxyNote}
+\Hypertarget{namespacecolor_aefe566c8b7cb4ad17c6b5af46d9a2748}\index{color@{color}!fg\_rgb@{fg\_rgb}}
+\index{fg\_rgb@{fg\_rgb}!color@{color}}
+\doxysubsubsection{\texorpdfstring{fg\_rgb()}{fg\_rgb()}}
+{\footnotesize\ttfamily \label{namespacecolor_aefe566c8b7cb4ad17c6b5af46d9a2748} 
+std\+::string color\+::fg\+\_\+rgb (\begin{DoxyParamCaption}\item[{int}]{r}{, }\item[{int}]{g}{, }\item[{int}]{b}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Generates ANSI escape code for RGB true-\/color FOREGROUND. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em r} & Red component (0–255) \\
+\hline
+{\em g} & Green component (0–255) \\
+\hline
+{\em b} & Blue component (0–255) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\+::string ANSI escape sequence to set the terminal\textquotesingle{}s foreground color.
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+Requires terminal support for 24-\/bit true color (most modern terminals support this). 
+\end{DoxyNote}
+\Hypertarget{namespacecolor_ae62dd84561ca8a3226a5c6b4a0bb4eb3}\index{color@{color}!printc@{printc}}
+\index{printc@{printc}!color@{color}}
+\doxysubsubsection{\texorpdfstring{printc()}{printc()}}
+{\footnotesize\ttfamily \label{namespacecolor_ae62dd84561ca8a3226a5c6b4a0bb4eb3} 
+template$<$typename T$>$ \\
+void color\+::printc (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{color}{, }\item[{const T \&}]{text}{}\end{DoxyParamCaption})}
+
+
+
+Prints the given text with a color followed by a newline. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & The type of text to print (supports std\+::string, const char\texorpdfstring{$\ast$}{*}, etc.) \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em color} & ANSI color code to apply. \\
+\hline
+{\em text} & The text to print. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{namespacecolor_aee7cc00b6962b257bb02d1ba429acc8c}\index{color@{color}!printcf@{printcf}}
+\index{printcf@{printcf}!color@{color}}
+\doxysubsubsection{\texorpdfstring{printcf()}{printcf()}}
+{\footnotesize\ttfamily \label{namespacecolor_aee7cc00b6962b257bb02d1ba429acc8c} 
+template$<$typename T$>$ \\
+void color\+::printcf (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{color}{, }\item[{const T \&}]{text}{}\end{DoxyParamCaption})}
+
+
+
+Prints the given text with a color without adding a newline. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & The type of text to print (supports std\+::string, const char\texorpdfstring{$\ast$}{*}, etc.) \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em color} & ANSI color code to apply. \\
+\hline
+{\em text} & The text to print. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{namespacecolor_a08ca38d06f4a5b69a56406e61322f410}\index{color@{color}!progress\_bar@{progress\_bar}}
+\index{progress\_bar@{progress\_bar}!color@{color}}
+\doxysubsubsection{\texorpdfstring{progress\_bar()}{progress\_bar()}}
+{\footnotesize\ttfamily \label{namespacecolor_a08ca38d06f4a5b69a56406e61322f410} 
+void color\+::progress\+\_\+bar (\begin{DoxyParamCaption}\item[{float}]{percentage}{, }\item[{int}]{width}{ = {\ttfamily 50}, }\item[{const std\+::string \&}]{color}{ = {\ttfamily BRIGHT\+\_\+GREEN}}\end{DoxyParamCaption})}
+
+
+
+Displays a colored progress bar on the terminal. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em percentage} & float showing the percentage of progress (0–100). \\
+\hline
+{\em width} & The total width of the progress bar (default is 50). \\
+\hline
+{\em color} & ANSI color code for the progress bar (default is bright green). \\
+\hline
+\end{DoxyParams}
+
+
+\label{doc-var-members}
+\Hypertarget{namespacecolor_doc-var-members}
+\doxysubsection{Variable Documentation}
+\Hypertarget{namespacecolor_ace740120b460c1d0b42beef87e862374}\index{color@{color}!NO\_BOLD@{NO\_BOLD}}
+\index{NO\_BOLD@{NO\_BOLD}!color@{color}}
+\doxysubsubsection{\texorpdfstring{NO\_BOLD}{NO\_BOLD}}
+{\footnotesize\ttfamily \label{namespacecolor_ace740120b460c1d0b42beef87e862374} 
+auto color\+::\+NO\+\_\+\+BOLD = "{}\textbackslash{}033\mbox{[}22m"{}\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+RESETS BOLD AS WELL AS DIM \Hypertarget{namespacecolor_af111a4e552f4017bedf28f33d134741c}\index{color@{color}!STRIKETHROUGH@{STRIKETHROUGH}}
+\index{STRIKETHROUGH@{STRIKETHROUGH}!color@{color}}
+\doxysubsubsection{\texorpdfstring{STRIKETHROUGH}{STRIKETHROUGH}}
+{\footnotesize\ttfamily \label{namespacecolor_af111a4e552f4017bedf28f33d134741c} 
+auto color\+::\+STRIKETHROUGH = "{}\textbackslash{}033\mbox{[}9m"{}\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+NOT WIDELY SUPPORTED 
